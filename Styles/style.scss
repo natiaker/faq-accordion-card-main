@@ -76,12 +76,22 @@ body {
     margin-top: 1.3rem;
 }
 
+.show {
+    display: block;
+}
+
+.active {
+    font-weight: 700;
+}
+
+
+
 .container {
     position: relative!important;
     display: flex;
     flex-direction: column;
     width: 32.7rem;
-    min-height: 53.5rem;
+    height: 53.5rem;
     margin: 14.8rem 2.4rem 8.5rem;
     padding: 13.2rem 2.4rem 4.8rem;
     background-color: white;
@@ -102,10 +112,9 @@ body {
         padding-top: 1.8rem;
         padding-bottom: 1.8rem;
         border-bottom: .1rem solid $light-grayish-blue;
-        &--div {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        transition: all .2s;
+        span img{
+            float: right;
         }
     }
 
@@ -122,10 +131,15 @@ body {
             width: 50%;
             max-width: 35rem;
             padding: 6.5rem 0 4.3rem;
+            font-size: 1.4rem;
             h1 {
                 text-align: unset;
                 margin-bottom: 2.5rem;
             }
+        }
+        &__question--p:hover {
+            color: $soft-red;
+            cursor: pointer;
         }
     }
 }
